@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maenghitung luas dan keliling bangun datar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>MENGHITUNG LUAS DAN KELILING BANGUN DATAR</h2>
+<p>Pilih Menu Berikut</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'persegi panjang')">Persegi Panjang</button>
+  <button class="tablinks" onclick="openCity(event, 'Bujur sangkar')">Bujur sangkar</button>
+  <button class="tablinks" onclick="openCity(event, 'Lingkaran')">Lingkaran</button>
+</div>
+
+<div id="persegi panjang" class="tabcontent">
+  <h3>Persegi Panjang</h3>
+  <p>menghitung luas dan keliling persegi panjang</p>
+
+ 
+
+  <form class="inputan_persegi">
+    <label for="panjang">Panjang :</label>
+    <input type="number" id="panjang" name="panjang" placeholder="Masukan Panjang..">
+    
+    <label for="lebar">Lebar :</label>
+    <input type="number" id="lebar" name="lebar" placeholder="Masukan Lebar..">
+    
+    <input class="hitung" type="button" value="Hitung" onclick="hitungLuasDanKelilingPersegiPanjang()">
+    <input class="reset" type="button" value="Reset" onclick="reset()">
+
+    <label for="luasPersegi">Luas :</label>
+    <input type="text" id="luasPersegi" name="luasPersegi" placeholder="0" readonly>
+
+    <label for="kelilingPersegi">Keliling :</label>
+    <input type="text" id="kelilingPersegi" name="kelilingPersegi" placeholder="0" readonly>
+</form>
+</div>
+
+<div id="Bujur sangkar" class="tabcontent">
+  <h3>Bujur sangkar</h3>
+  <p>menghitung luas dan keliling Bujur sangkar</p> 
+  <form id="bujursangkarForm">
+    <label for="sisi">Panjang Sisi:</label>
+    <input type="number" id="sisi" name="sisi" required>
+
+    <button type="button" onclick="hitung()">Hitung</button>
+    <button type="button" onclick="resetForm()">Reset</button>
+
+    
+  <h3>Hasil:</h3>
+  <p id="luas">Luas: </p>
+  <p id="keliling">Keliling: </p>
+ 
+  
+</div>
+   
+<div id="Lingkaran" class="tabcontent">
+  <h3>Lingkaran</h3>
+  <p>menghitung luas dan keliling lingkaran</p>
+
+  <p>Masukkan nilai jari-jari (dalam cm)</p>
+  <p>Jari-Jari: <input type="number" id="jariJari"></p>
+  <button onclick="hitungLingkaran()">Hitung</button>
+  <button onclick="resetLingkran()">reset</button>
+  <p id="luasLingkaran"></p>
+  <p id="kelilingLingkaran"></p>
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
